@@ -1,0 +1,43 @@
+<h1 *ngIf="authenticationService.userData | async">Hello {{ (authenticationService.userData | async)?.email }}</h1>
+
+
+<button (click)="signOut()" *ngIf="authenticationService.userData | async">Logout</button>
+
+
+
+<div class="page-wrapper" *ngIf="!(authenticationService.userData | async)">
+	<div class="auth-bg">
+		<div class="authentication-box">
+			<div class="text-center"><img src="assets/images/endless-logo.png" alt=""></div>
+			<div class="card mt-4">
+				<div class="card-body">
+					<div class="text-center">
+						<h4>LOGIN</h4>
+						<h6>Enter your Username and Password </h6>
+					</div>
+					<div class="theme-form" *ngIf="!newUser">
+						<div class="form-group">
+							<label class="col-form-label pt-0">Email</label>
+							<input class="form-control" [(ngModel)]="email" type="email" required="">
+						</div>
+						<div class="form-group">
+							<label class="col-form-label">Password</label>
+							<input class="form-control" type="password" [(ngModel)]="password" required="">
+						</div>
+
+						<div class="form-group form-row mt-3 mb-0">
+							<button class="btn btn-primary btn-block btn-lg"
+							 (click)="signIn()" ><span>Login</span>
+							</button>
+						</div>
+						<div class="form-group form-row mt-3 mb-0">
+							<button class="btn btn-primary btn-block btn-lg"
+							 (click)="signUp()" ><span>Sign Up</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

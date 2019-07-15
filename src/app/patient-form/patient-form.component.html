@@ -1,0 +1,202 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-xl-12">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+
+              <form class="theme-form mega-form">
+                <h5>Medical History Record</h5>
+                <h6 class="pb-4">For faster service, please complete the following form prior to arriving at our office.</h6>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label class="col-form-label">Appointment Date</label>
+                    <input [formControl]="appointment_date" name="appointment_date" type="date" class="form-control" placeholder="Appointment Date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Patient’s Name (please print)</label>
+                    <input [formControl]="patient_name" name="patient_name" type="text" class="form-control" placeholder="Patient's Name">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Birth Date</label>
+                    <input [formControl]="birth_date" name="birth_date" type="date" class="form-control" placeholder="Birth Date">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Male or Female</label><br>
+                    Male: <input [formControl]="gender" name="gender" type="radio" value="male" checked>
+                    Female: <input [formControl]="gender" name="gender" type="radio" value="female" >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Street Address</label>
+                    <input [formControl]="street_address" name="street_address" type="text" class="form-control" placeholder="Street Address">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="col-form-label">City</label>
+                    <input [formControl]="city" name="city" type="date" class="form-control" placeholder="City">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label class="col-form-label">State</label>
+                    <input [formControl]="state" name="state" type="date" class="form-control" placeholder="State">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class="col-form-label">Zip Code</label>
+                    <input [formControl]="zip_code" name="zip_code" type="date" class="form-control" placeholder="Zip Code">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Home Phone</label>
+                    <input [formControl]="home_phone" name="home_phone" type="text" class="form-control" placeholder="Home Phone">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Work Phone</label>
+                    <input [formControl]="work_phone" name="work_phone" type="text" class="form-control" placeholder="Work Phone">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Employer</label>
+                    <input [formControl]="employer" name="employer" type="text" class="form-control" placeholder="Employer">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Occupation</label>
+                    <input [formControl]="occupation" name="occupation" type="text" class="form-control" placeholder="Occupation">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Emergency Contact</label>
+                    <input [formControl]="emergency_contact" name="emergency_contact" type="text" class="form-control" placeholder="Emergency Contact">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Phone Number</label>
+                    <input [formControl]="phone_number" name="phone_number" type="text" class="form-control" placeholder="Phone Number">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Date of Last Eye Exam</label>
+                    <input [formControl]="last_eye_exam_date" name="last_eye_exam_date" type="text" class="form-control" placeholder="Date of Last Eye Exam">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Name of Previous Eye Doctor</label>
+                    <input [formControl]="previous_eye_doctor" name="previous_eye_doctor" type="text" class="form-control" placeholder="Name of Previous Eye Doctor">
+                  </div>
+                </div>
+
+                <br><br>
+                <h6 class="pb-4">Personal Medical Information: Do you have problems with any of these systems? If Yes, please check box.</h6>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="gastrointestinal_problem" name="gastrointestinal_problem" type="checkbox" > Gastrointestinal </label>
+                  <label class="col-md-3"> <input [formControl]="nervous_system_problem" name="nervous_system_problem" type="checkbox" > Nervous System </label>
+                  <label class="col-md-3"> <input [formControl]="mental_problem" name="mental_problem" type="checkbox" > Mental </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="ent_problem" name="ent_problem" type="checkbox" > Ear/Nose/Throat </label>
+                  <label class="col-md-3"> <input [formControl]="genitourinary_problem" name="genitourinary_problem" type="checkbox" > Genitourinary </label>
+                  <label class="col-md-3"> <input [formControl]="endorcrine_problem" name="endorcrine_problem" type="checkbox" > Endocrine (Glands) </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="cardiovasculr_problem" name="cardiovasculr_problem" type="checkbox" > Cardiovascular </label>
+                  <label class="col-md-3"> <input [formControl]="musculockeletal_problem" name="musculockeletal_problem" type="checkbox" > Musculoskeletal </label>
+                  <label class="col-md-3"> <input [formControl]="blood_problem" name="blood_problem" type="checkbox" > Blood/Lymph </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="respiratory_problem" name="respiratory_problem" type="checkbox" > Respiratory </label>
+                  <label class="col-md-3"> <input [formControl]="skin_problem" name="skin_problem" type="checkbox" > Skin </label>
+                  <label class="col-md-3"> <input [formControl]="allergic_problem" name="allergic_problem" type="checkbox" > Allergic/Immunologic </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="headaches_problem" name="headaches_problem" type="checkbox" > Headaches </label>
+                  <label class="form-group col-md-4"> <input [formControl]="surgeries_problem" name="surgeries_problem" type="checkbox" > Surgeries (what type & when) </label>
+                  <div class="form-group col-md-4">
+                    <input [formControl]="surgeries_detail" name="surgeries_detail" type="text" class="form-control" placeholder="Surgeries (what type & when)">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="col-form-label">Are you in good health? </label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="good_health" name="good_health" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="good_health" name="good_health" type="radio" value="no"> </label>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="col-form-label">Any allergic reactions to medications or other substances?  </label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="alergic_reactions" name="alergic_reactions" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="alergic_reactions" name="surgeries_problem" type="radio" value="no"> </label>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-12">
+                    <label class="col-form-label">If yes, please list</label>
+                    <input [formControl]="medicine_alergies" name="medicine_alergies" type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <label class="col-form-label">Name of general physician</label>
+                    <input [formControl]="general_physician" name="general_physician" type="text" class="form-control" placeholder="Name of general physician">
+                  </div>
+                </div>
+
+                <h6 class="pb-4">Please check Yes or No.</h6>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="col-form-label">Do you smoke?</label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="smoker" name="smoker" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="smoker" name="smoker" type="radio" value="no"> </label>
+                  <label class="col-md-2 mt-6 text-right"> How much? </label>
+                  <input [formControl]="how_much_smoke" name="how_much_smoke" type="text" class="form-control col-md-4" placeholder="">
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="col-form-label">Do you drink alcohol?</label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="drink_alcohol" name="drink_alcohol" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="drink_alcohol" name="drink_alcohol" type="radio" value="no"> </label>
+                  <label class="col-md-2 mt-6 text-right"> How much? </label>
+                  <input [formControl]="how_much_drink" name="how_much_drink" type="text" class="form-control col-md-4" placeholder="">
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="col-form-label">Do you take madications?</label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="takeing_medications" name="takeing_medications" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="takeing_medications" name="takeing_medications" type="radio" value="no"> </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-4 mt-6 "> if yes. Please list names & how often </label>
+                  <input [formControl]="medication_list" name="medication_list" type="text" class="form-control col-md-8" placeholder="">
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="col-form-label">Do you take other substances?</label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes </label>
+                  <label class="col-md-1 mt-6"> No </label>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary mr-1">Submit</button>
+              <button class="btn btn-secondary">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid Ends-->
