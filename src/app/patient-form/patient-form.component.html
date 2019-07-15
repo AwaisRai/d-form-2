@@ -184,8 +184,59 @@
                   <div class="col-md-3">
                     <label class="col-form-label">Do you take other substances?</label>
                   </div>
-                  <label class="col-md-1 mt-6"> Yes </label>
-                  <label class="col-md-1 mt-6"> No </label>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="takeing_substances" name="takeing_substances" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="takeing_substances" name="takeing_substances" type="radio" value="no"> </label>
+                </div>
+
+                <h6 class="pb-4">Do you have family history of any of the following? If Yes, please check box.</h6>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="diabetes" name="diabetes" type="checkbox" > Diabetes </label>
+                  <label class="col-md-3"> <input [formControl]="glaucoma" name="glaucoma" type="checkbox" > Glaucoma </label>
+                  <label class="col-md-3"> <input [formControl]="high_blood_pressure" name="high_blood_pressure" type="checkbox" > High blood pressure </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="macular_degen" name="macular_degen" type="checkbox" > Macular Degen. </label>
+                  <label class="col-md-3"> <input [formControl]="retinal_detachmt" name="retinal_detachmt" type="checkbox" > Retinal Detachmt </label>
+                  <label class="col-md-3"> <input [formControl]="cataracts" name="cataracts" type="checkbox" > Cataracts </label>
+                  <div class="form-group col-md-12">
+                    <label class="col-form-label">Please explain any boxes you have checked</label>
+                    <input [formControl]="family_disease_details" name="family_disease_details" type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
+
+                <h6 class="pb-4">Do you have any of the following? If Yes, please check box.</h6>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="dry_eyes" name="dry_eyes" type="checkbox" > Dry Eyes </label>
+                  <label class="col-md-3"> <input [formControl]="eye_surgeries" name="eye_surgeries" type="checkbox" > Eye Surgeries </label>
+                  <label class="col-md-3"> <input [formControl]="wear_glasses" name="wear_glasses" type="checkbox" > Wear Glasses </label>
+                </div>
+                <div class="row">
+                  <label class="col-md-3"> <input [formControl]="blurred_vision" name="blurred_vision" type="checkbox" > Blurred Vision </label>
+                  <label class="col-md-3"> <input [formControl]="eye_injuries" name="eye_injuries" type="checkbox" > Eye Injuries </label>
+                  <label class="col-md-3"> <input [formControl]="wear_contacts" name="wear_contacts" type="checkbox" > Wear Contacts </label>
+                  <div class="form-group col-md-12">
+                    <label class="col-form-label">Any eye problems at this time? Please explain</label>
+                    <input [formControl]="family_disease_details" name="family_disease_details" type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5">
+                    <label class="col-form-label">Are you interested in laser vision correction?</label>
+                  </div>
+                  <label class="col-md-1 mt-6"> Yes <input [formControl]="interested_in_laset_vision_correction" name="interested_in_laset_vision_correction" type="radio" value="yes"> </label>
+                  <label class="col-md-1 mt-6"> No <input [formControl]="interested_in_laset_vision_correction" name="interested_in_laset_vision_correction" type="radio" value="no"> </label>
+                </div>
+                <hr><br>
+                <label>Please sign below that you have reviewed all information above and it is correct to the best of your knowledge.</label>
+                <br><br>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label class="col-form-label">Signature</label>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label class="col-form-label">Date</label>
+                  </div>
                 </div>
               </form>
             </div>
